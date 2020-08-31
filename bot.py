@@ -857,8 +857,8 @@ class ModmailBot(commands.Bot):
         await self.process_commands(message)
 
     async def process_commands(self, message):
-        if message.author.bot and message.author.name is not 'TradelandsBot 2.0':
-            return
+        if message.author.bot:
+            #return
 
         if isinstance(message.channel, discord.DMChannel):
             return await self.process_dm_modmail(message)
