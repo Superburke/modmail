@@ -858,6 +858,7 @@ class ModmailBot(commands.Bot):
 
     async def process_commands(self, message):
         if message.author.bot and message.author.id is not 479719259774386176:
+            print(message.author.name)
             return
 
         if isinstance(message.channel, discord.DMChannel):
