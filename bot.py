@@ -857,8 +857,10 @@ class ModmailBot(commands.Bot):
         await self.process_commands(message)
 
     async def process_commands(self, message):
-        #if message.author.bot:
-            #return
+        if message.author.bot:
+            print(message.author.id)
+            print(message.author.id == 479719259774386176)
+            return
 
         if isinstance(message.channel, discord.DMChannel):
             return await self.process_dm_modmail(message)
