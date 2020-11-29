@@ -1059,7 +1059,7 @@ class ModmailBot(commands.Bot):
 
     async def process_commands(self, message):
         if message.author.bot:
-            return
+            #return
             if message.author.id != 479719259774386176:
                 return
 
